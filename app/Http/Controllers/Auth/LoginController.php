@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Mockery\Generator\StringManipulation\Pass\Pass;
 
 class LoginController extends Controller
 {
@@ -14,22 +16,20 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function authenticate(Request $request)
+    public function authenticate(LoginRequest $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|min:6',
-        ]);
+        $credentials = $request->only('email', 'password');
 
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
             return redirect()->intended(route('site.dashboard'));
-        } else {
-            return back()->withErrors([
-                'email' => 'Crendenciais Inválidas'
-            ]);
-        };
+        }
+
+        return back()->withErrors([
+            'email' => 'Crendenciais Inválidas'
+        ]);
+
     }
 
     public function logout(Request $request): RedirectResponse
