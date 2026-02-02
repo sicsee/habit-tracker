@@ -8,13 +8,15 @@ class SiteController extends Controller
 {
     public function index()
     {
-        $name = 'Nicolas';
-        $habits = ['Correr', 'Ler', 'Jogar'];
-        return view('home', compact('name', 'habits') );
+        
+        return view('home');
     }
 
     public function dashboard()
     {
-        return view('dashboard');
+
+        $habits = auth()->user()->habit;
+
+        return view('dashboard', compact('habits'));
     }
 }
