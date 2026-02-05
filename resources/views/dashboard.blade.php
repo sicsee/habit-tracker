@@ -20,9 +20,22 @@
     @endsession
 
     <div class="grid grid-cols-3 gap-4 mt-10">
-      <ul>
+      <ul class="bg-white">
         @forelse($habits as $item)
-          <li class="bg-white p-2 border-2 rounded-lg shadow-md text-center text-black text-xl ">- {{ $item->name }}</li>
+          <li >
+            <div class="flex items-center w-fit p-2 rounded-lg shadow-md text-center text-black text-xl gap-10 ">
+              <p>
+                - {{ $item->name }}
+              </p>
+              <form action="{{ route('habit.destroy', $item) }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="bg-red-500 p-2 rounded hover:opacity-80 cursor-pointer">
+                  <x-icon.trash />
+                </button>
+              </form>
+            </div
+        </li>
         @empty
           <li>Nenhum hábito encontrado</li>
         @endforelse
