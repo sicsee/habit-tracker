@@ -5,7 +5,7 @@
       Bem-Vindo {{ auth()->user()->name }}
     </p>
 
-    <a href="{{ route('habit.create') }}" class="bg-white border-2 flex font-bold w-fit p-2 text-xl">
+    <a href="{{ route('habits.create') }}" class="bg-white border-2 flex font-bold w-fit p-2 text-xl">
       Crie um novo hábito
     </a>
 
@@ -27,10 +27,10 @@
               <p>
                 - {{ $item->name }}
               </p>
-              <a href="{{ route('habit.edit', $item) }}">
+              <a href="{{ route('habits.edit', $item) }}">
                 <x-icon.edit />
               </a>
-              <form action="{{ route('habit.destroy', $item) }}" method="POST">
+              <form action="{{ route('habits.destroy', $item) }}" method="POST">
                 @method('DELETE')
                 @csrf
                 <button type="submit" class="bg-red-500 p-2 rounded hover:opacity-80 cursor-pointer">

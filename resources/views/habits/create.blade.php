@@ -5,7 +5,7 @@
      <section class="bg-white max-w-150 mx-auto mt-4 p-10 pb-6 border-2">
 
 
-      <form action="{{ route('habit.store') }}" method="POST">
+      <form action="{{ route('habits.store') }}" method="POST">
         @csrf
 
         <div class="flex flex-col gap-2 mb-4">
