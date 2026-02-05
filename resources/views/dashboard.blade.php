@@ -27,6 +27,9 @@
               <p>
                 - {{ $item->name }}
               </p>
+              <a href="{{ route('habit.edit', $item) }}">
+                <x-icon.edit />
+              </a>
               <form action="{{ route('habit.destroy', $item) }}" method="POST">
                 @method('DELETE')
                 @csrf
