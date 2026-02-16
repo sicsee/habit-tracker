@@ -1,5 +1,5 @@
 <x-layout>
-  <main class="py-10">
+  <main class="py-10 min-h-[calc(100vh-160px)]">
     <h1>Dashboard</h1>
     <h2 class="text-4xl text-center font-bold">
       Bem-Vindo {{ auth()->user()->name }}

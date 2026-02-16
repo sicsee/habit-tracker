@@ -11,6 +11,4 @@ class SiteController extends Controller
         
         return view('home');
     }
-
-
 }

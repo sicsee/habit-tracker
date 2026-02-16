@@ -1,6 +1,6 @@
 <x-layout>
   <main class="py-10">
-    <section class="bg-white max-w-150 mx-auto mt-4 p-10 pb-6 border-2">
+    <section class="bg-white max-w-150 mx-auto mt-4 p-10 pb-6 habit-shadow-lg">
       <h1 class="font-bold text-3xl">
         Faça Login
       </h1>
@@ -14,7 +14,9 @@
 
         <div class="flex flex-col gap-2 mb-4">
           <label for="email">Email</label>
-          <input type="email" name="email" placeholder="you@email.com" class="bg-white border-2 p-2 @error('email') border-red-500 @enderror">
+          <input type="email" name="email" 
+          placeholder="you@email.com" 
+          class="bg-white habit-shadow p-2 @error('email') border-red-500 @enderror">
           @error('email')
             <p class="text-red-500 text-sm">
               {{ $message }}
@@ -24,7 +26,7 @@
 
         <div class="flex flex-col gap-2 mb-4">
           <label for="password">Senha</label>
-          <input type="password" name="password" placeholder="**********" class="bg-white border-2 p-2 @error('password') border-red-500 @enderror">
+          <input type="password" name="password" placeholder="**********" class="bg-white habit-shadow p-2 @error('password') border-red-500 @enderror">
           @error('password')
             <p class="text-red-500 text-sm">
               {{ $message }}
@@ -32,7 +34,7 @@
           @enderror
         </div>
 
-        <button type="submit" class="bg-white p-2 border-2">Entrar</button>
+        <button type="submit" class="bg-habit-orange habit-btn habit-shadow-lg p-2">Entrar</button>
       </form>
 
       <p class="text-center mt-4">

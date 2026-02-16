@@ -9,7 +9,7 @@
   </title>
   @vite('resources/css/app.css')
 </head>
-<body class="bg-background">
+<body class="bg-background min-h-screen flex justify-between flex-col">
 
   {{-- HEADER --}}
   <x-header />

@@ -1,3 +1,3 @@
 <footer class="bg-white border-t-2 p-4">
-  <p class="text-center">Criado por Nicolas Godinho. O código está no <a href="https://github.com/sicsee/habit-tracker" target="_blank" class="underline">Github</a></p>
+  <p class="text-center">Criado por <a href="https://github.com/sicsee" target="_blank" class="underline hover:text-habit-orange">Nicolas Godinho.</a> O código está no <a href="https://github.com/sicsee/habit-tracker" target="_blank" class="underline hover:text-habit-orange">Github</a></p>
 </footer>
