@@ -1,15 +1,7 @@
 <x-layout>
-  <main class="py-10 min-h-[calc(100vh-160px)]">
-    <h1>Dashboard</h1>
-    <h2 class="text-4xl text-center font-bold">
-      Bem-Vindo {{ auth()->user()->name }}
-    </p>
+  <main class="py-10 min-h-[calc(100vh-160px)] px-4">
 
-    <a href="{{ route('habits.create') }}" class="bg-white border-2 flex font-bold w-fit p-2 text-xl">
-      Crie um novo hábito
-    </a>
-
-    
+    <x-navbar />
 
     @session('success')
     <div class="flex">
@@ -19,31 +11,25 @@
     </div>
     @endsession
 
-    <div class="grid grid-cols-3 gap-4 mt-10">
-      <ul class="bg-white">
+   <div>
+    <h2 class="text-lg mt-8 mb-4">
+      {{ date('d/m/Y') }}
+    </h2>
+   
+      <ul class="flex flex-col gap-2">
         @forelse($habits as $item)
-          <li >
-            <div class="flex items-center w-fit p-2 rounded-lg shadow-md text-center text-black text-xl gap-10 ">
-              <p>
-                - {{ $item->name }}
-              </p>
-              <a href="{{ route('habits.edit', $item) }}">
-                <x-icon.edit />
-              </a>
-              <form action="{{ route('habits.destroy', $item) }}" method="POST">
-                @method('DELETE')
-                @csrf
-                <button type="submit" class="bg-red-500 p-2 rounded hover:opacity-80 cursor-pointer">
-                  <x-icon.trash />
-                </button>
-              </form>
-            </div
-        </li>
+          <li class="habit-shadow-lg p-2 bg-habit-bg">
+            <div class="flex gap-2 items-center">
+              <input type="checkbox" class="h-5 w-5" {{ $item->is_completed ? 'checked' : '' }} disabled>
+              <p class="font-bold text-xl">
+                {{ $item->name }}
+              </p> 
+            </div>
+          </li>
         @empty
           <li>Nenhum hábito encontrado</li>
         @endforelse
       </ul>
-      
     </div>
   </main>
 </x-layout>

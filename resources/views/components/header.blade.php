@@ -4,10 +4,6 @@
     <h1>HT</h1>
   </a>
 
-  {{-- GITHUB --}}
-  <div>
-    github
-  </div>
 
   <div class="flex gap-5">
   @auth
