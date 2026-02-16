@@ -16,7 +16,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class=" text-md hover:underline">
+        <a href="{{ route('habits.settings') }}" class="{{ Route::is('habits.settings') ? 'font-bold underline' : '' }} text-md hover:underline">
           Gerenciar Hábitos
         </a>
       </li>

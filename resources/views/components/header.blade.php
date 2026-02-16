@@ -1,8 +1,13 @@
 <header class="bg-white border-b-2 flex items-center justify-between p-4">
   {{-- LOGO --}}
-  <a href="{{ route('site.index') }}" class="habit-btn habit-shadow-lg px-2 py-1 bg-habit-orange">
-    <h1>HT</h1>
-  </a>
+  <div class="flex items-center gap-2">
+    <a href="{{ route('site.index') }}" class="habit-btn habit-shadow-lg px-2 py-1 bg-habit-orange">
+      <h1>HT</h1>
+    </a>
+    <p class="font-bold">
+      Habit Tracker
+    </p>
+  </div>
 
 
   <div class="flex gap-5">
