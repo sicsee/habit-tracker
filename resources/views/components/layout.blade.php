@@ -9,7 +9,7 @@
   </title>
   @vite('resources/css/app.css')
 </head>
-<body class="bg-background min-h-screen flex justify-between flex-col font-mono">
+<body class="bg-background min-h-screen flex justify-between flex-col font-mono relative">
 
   {{-- HEADER --}}
   <x-header />
@@ -19,5 +19,9 @@
 
   {{-- FOOTER --}}
   <x-footer />
+
+  {{-- TOAST --}}
+  <x-toast />
+  <script type="module" src="{{ Vite::asset('resource/js/app.js') }}"></script>
 </body>
 </html>
