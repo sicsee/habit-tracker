@@ -6,9 +6,9 @@
 
     {{-- CONTENT --}}
     <div class="flex flex-col gap-4 items-start">
-      <h2 class="text-lg mt-8 mb-2 font-bold">
+      <x-title>
         {{ \Carbon\Carbon::now()->locale('pt-BR')->translatedFormat('l, d \d\e F') }}
-      </h2>
+      </x-title>
 
       <ul class="flex flex-col gap-2 w-full">
         @forelse($habits as $item)
