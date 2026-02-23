@@ -53,7 +53,7 @@
           @enderror
         </div>
 
-        <button type="submit" class="bg-white p-2 border-2">Cadastrar</button>
+        <button type="submit" class="bg-habit-orange habit-btn habit-shadow-lg p-2">Cadastrar</button>
       </form>
 
       <p class="text-center mt-4">

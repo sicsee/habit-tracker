@@ -29,6 +29,10 @@
         Cadastrar
       </a>
       @endguest
+
+      <a class="habit-btn habit-shadow-lg p-2" href="https://github.com/combizera/habit-tracker-ytb">
+        <x-icons.github />
+      </a>
     </div>
 </div>
 </header>

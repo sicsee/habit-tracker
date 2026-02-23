@@ -18,6 +18,13 @@
   --color-habit-bg: #FFDAAC;
 }
 
+
+.habit-bg {
+  background-size: 65px 65px;
+  background-image: linear-gradient(90deg, #80808033 1px, #0000 0), linear-gradient(#80808033 1px, #0000 0);
+  background-color: var(--color-background);
+}
+
 .habit-shadow {
   border: 2px solid #000;
   box-shadow: 2px 2px 0px #000;
